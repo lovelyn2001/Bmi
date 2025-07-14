@@ -1,3 +1,4 @@
+// This widget provides a reusable card UI component for the BMI calculator.
 import 'package:flutter/material.dart';
 
 class ResuableCard extends StatelessWidget {

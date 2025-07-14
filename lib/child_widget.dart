@@ -1,3 +1,4 @@
+// This widget is used to display the gender icon and label in the gender selection cards.
 import 'package:flutter/material.dart';
 import 'package:xylophone_app/constants.dart';
 
