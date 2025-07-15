@@ -1,16 +1,44 @@
-# xylophone_app
+BMI Calculator
+A simple and interactive Body Mass Index (BMI) calculator built with Flutter. This app allows users to input their height and weight, select gender, and instantly see their BMI result with a clean and modern UI.
 
-A new Flutter project.
+Features
+Select gender (male/female) with custom cards
+Adjust height using a slider
+Input weight and age (extendable)
+Real-time BMI calculation and display
+Responsive and attractive design
+Built with Flutter and Dart
 
-## Getting Started
+#####
 
-This project is a starting point for a Flutter application.
+Getting Started
+Prerequisites
+Flutter SDK
+Dart SDK (comes with Flutter)
+An IDE like VS Code or Android Studio
+Installation
+Clone this repository:
+Get the dependencies:
+Run the app:
+Project Structure
+lib
+main.dart - Entry point of the app
+input_page.dart - Main UI for user input
+child_widget.dart - Gender icon widget
+resuable_card.dart - Custom card widget
+constants.dart - App constants and styles
+models/ - Data models (e.g., question schema)
+data/ - Static data (e.g., questions)
+screens/ - Additional screens (if any)
+assets - App assets (images, icons)
+test - Widget and unit tests
+Customization
+Update colors and styles in constants.dart
+Add more features (e.g., BMI interpretation, history) in screens
+Screenshots
+Add screenshots of your app here
 
-A few resources to get you started if this is your first Flutter project:
+License
+This project is licensed under the MIT License.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Feel free to edit and add more details as your project evolves!

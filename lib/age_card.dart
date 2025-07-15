@@ -1,6 +1,7 @@
 // This widget displays and manages the age selection card for the BMI calculator.
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:xylophone_app/resuable_card.dart';
 import 'constants.dart';
 
 class AgeCard extends StatefulWidget {
@@ -22,26 +23,22 @@ class _AgeCardState extends State<AgeCard> {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            FloatingActionButton(
-              backgroundColor: Color(0XFF4C4F5E),
-              foregroundColor: Colors.white,
+            RoundedIconButton(
+              FontAwesomeIcons.minus,
               onPressed: () {
                 setState(() {
                   ageValue--;
                 });
               },
-              child: Icon(FontAwesomeIcons.minus),
             ),
             SizedBox(width: sizedBoxHeight),
-            FloatingActionButton(
-              backgroundColor: Color(0XFF4C4F5E),
-              foregroundColor: Colors.white,
+            RoundedIconButton(
+              FontAwesomeIcons.plus,
               onPressed: () {
                 setState(() {
                   ageValue++;
                 });
               },
-              child: Icon(FontAwesomeIcons.plus),
             ),
           ],
         ),

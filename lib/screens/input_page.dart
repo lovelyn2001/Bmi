@@ -5,6 +5,7 @@ import 'package:xylophone_app/child_widget.dart';
 import 'package:xylophone_app/resuable_card.dart';
 import 'package:xylophone_app/constants.dart';
 import 'package:xylophone_app/weight_card.dart';
+import 'package:xylophone_app/screens/result_screen.dart';
 
 class InputPage extends StatefulWidget {
   const InputPage({super.key});
@@ -114,18 +115,40 @@ class _InputPageState extends State<InputPage> {
             ),
           ),
           // Bottom container for calculate button or info
-          Container(
-            margin: EdgeInsets.only(top: 10.0),
-            color: bottomContainerColor,
-            width: double.infinity,
-            height: bottomContainerHeight,
+          GestureDetector(
+            onTap: () {
+              final result = getBmiCategory(
+                weightValue.toDouble(),
+                heightValue.toDouble(),
+              );
+
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => ResultScreen(
+                    bmi: result['bmi']!,
+                    category: result['category']!,
+                    message: result['message']!,
+                  ),
+                ),
+              );
+            },
+
+            child: Container(
+              margin: EdgeInsets.only(top: 10.0),
+              padding: EdgeInsets.only(bottom: 20.0),
+              color: bottomContainerColor,
+              width: double.infinity,
+              height: bottomContainerHeight,
+              child: Center(
+                child: Text(
+                  'CALCULATE',
+                  style: Theme.of(context).textTheme.bodyMedium,
+                ),
+              ),
+            ),
           ),
         ],
-      ),
-      // Floating action button (currently does nothing)
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: Icon(Icons.add),
       ),
     );
   }

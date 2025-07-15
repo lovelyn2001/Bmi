@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:xylophone_app/input_page.dart';
+import 'package:xylophone_app/screens/input_page.dart';
 import 'package:xylophone_app/constants.dart';
 
 void main() {
@@ -16,11 +16,17 @@ class BmiCalculator extends StatelessWidget {
         colorScheme: ColorScheme.dark().copyWith(surface: Color(0xFF0A0E21)),
         scaffoldBackgroundColor: Color(0xFF0A0E21),
         textTheme: TextTheme(
+          displayMedium: TextStyle(color: Colors.green),
           bodySmall: TextStyle(color: Color(0XFF8D8E98), fontSize: 18.0),
           bodyLarge: TextStyle(
             color: Colors.white,
             fontSize: 50.0,
             fontWeight: FontWeight.w900,
+          ),
+          bodyMedium: TextStyle(
+            color: Colors.white,
+            fontSize: 25.0,
+            fontWeight: FontWeight.bold,
           ),
         ),
         sliderTheme: SliderTheme.of(context).copyWith(

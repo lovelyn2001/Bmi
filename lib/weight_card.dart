@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:xylophone_app/constants.dart';
+import 'resuable_card.dart';
 
 class WeightCard extends StatefulWidget {
   const WeightCard(this.text, {super.key});
@@ -23,26 +24,22 @@ class _WeightCardState extends State<WeightCard> {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            FloatingActionButton(
-              backgroundColor: const Color(0XFF4C4F5E),
-              foregroundColor: Colors.white,
+            RoundedIconButton(
+              FontAwesomeIcons.minus,
               onPressed: () {
                 setState(() {
                   weightValue--;
                 });
               },
-              child: const Icon(FontAwesomeIcons.minus),
             ),
             const SizedBox(width: sizedBoxHeight),
-            FloatingActionButton(
-              backgroundColor: const Color(0XFF4C4F5E),
-              foregroundColor: Colors.white,
+            RoundedIconButton(
+              FontAwesomeIcons.plus,
               onPressed: () {
                 setState(() {
                   weightValue++;
                 });
               },
-              child: const Icon(FontAwesomeIcons.plus),
             ),
           ],
         ),
