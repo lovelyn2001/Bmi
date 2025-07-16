@@ -1,3 +1,9 @@
+// Entry point for the BMI Calculator app
+// Main application widget
+// Build the MaterialApp with custom dark theme and home page
+// Custom text styles for the app
+// Custom slider theme for height selection
+// Set InputPage as the home screen
 import 'package:flutter/material.dart';
 import 'package:xylophone_app/screens/input_page.dart';
 import 'package:xylophone_app/constants.dart';
@@ -16,17 +22,26 @@ class BmiCalculator extends StatelessWidget {
         colorScheme: ColorScheme.dark().copyWith(surface: Color(0xFF0A0E21)),
         scaffoldBackgroundColor: Color(0xFF0A0E21),
         textTheme: TextTheme(
-          displayMedium: TextStyle(color: Colors.green),
           bodySmall: TextStyle(color: Color(0XFF8D8E98), fontSize: 18.0),
+          bodyMedium: TextStyle(
+            color: Colors.white,
+            fontSize: 22.0,
+            fontWeight: FontWeight.bold,
+          ),
+          headlineLarge: TextStyle(
+            color: Colors.green,
+            fontSize: 40.0,
+            fontWeight: FontWeight.bold,
+          ),
+          headlineMedium: TextStyle(
+            color: Colors.white,
+            fontSize: 36.0,
+            fontWeight: FontWeight.bold,
+          ),
           bodyLarge: TextStyle(
             color: Colors.white,
             fontSize: 50.0,
             fontWeight: FontWeight.w900,
-          ),
-          bodyMedium: TextStyle(
-            color: Colors.white,
-            fontSize: 25.0,
-            fontWeight: FontWeight.bold,
           ),
         ),
         sliderTheme: SliderTheme.of(context).copyWith(

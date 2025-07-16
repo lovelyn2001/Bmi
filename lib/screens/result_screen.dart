@@ -34,9 +34,9 @@ class ResultScreen extends StatelessWidget {
                 children: [
                   Text(
                     category,
-                    style: Theme.of(context).textTheme.displayMedium,
+                    style: Theme.of(context).textTheme.headlineLarge,
                   ),
-                  Text(bmi, style: Theme.of(context).textTheme.headlineLarge),
+                  Text(bmi, style: Theme.of(context).textTheme.headlineMedium),
                   Padding(
                     padding: const EdgeInsets.all(16.0),
                     child: Text(message, textAlign: TextAlign.center),
